@@ -1,0 +1,28 @@
+ body{
+            background-color: rgb(48, 72, 117);
+            color: aliceblue;
+            padding: 9px;
+            text-align: center;
+        }
+
+        #menu{
+            float: left;
+            width: 20%;
+            height: 390px;
+            background-color:rgb(216, 236, 243);
+        }
+
+        #main{
+            margin-left: 20%;
+            height: 500px;
+            background-color:cornsilk;
+            left: 20%;
+            font-style: normal;
+            
+        }
+        #footer {
+            margin-left: 20%;
+            background-color: rgb(48, 72, 117);
+            padding: 1px;
+            text-align: center;
+        }
