@@ -1,6 +1,6 @@
  body{
             background-color: rgb(98, 130, 190);
-            color: rgb(179, 220, 255);
+            color: rgb(8, 1, 39);
             padding: 9px;
             text-align: center;
         }
@@ -22,7 +22,7 @@
         }
 
         #main{
-            height: 1000px;
+            height: 1500px;
             background-color:cornsilk;
             left: 20%;
             font-style: normal;
