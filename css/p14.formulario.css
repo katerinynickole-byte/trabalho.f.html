@@ -1,85 +1,354 @@
 
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+
+    box-sizing: border-box;
+
+}
+
 
 body {
+
     background-color: rgb(98, 130, 190);
-    color: rgb(179, 220, 255);
+
+    color: rgb(8, 1, 39);
+
     padding: 9px;
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
 }
 
+
+
+/* CABEÇALHO */
+
+#header {
+
+    width: 100%;
+
+    min-height: 120px;
+
+    margin: 0 auto 12px;
+
+    padding: 15px;
+
+    background-color: rgb(37, 33, 94);
+
+    color: aliceblue;
+
+    text-align: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+}
+
+
+
+/* ORGANIZAÇÃO DO MENU E CONTEÚDO */
+
+#layout {
+
+    display: grid;
+
+    grid-template-columns: 24% 1fr;
+
+    align-items: start;
+
+    gap: 12px;
+
+    width: 100%;
+
+}
+
+
+
+/* MENU LATERAL */
+
+#aside {
+
+    width: 100%;
+
+    background-color: rgb(107, 112, 179);
+
+    padding: 15px;
+
+    border-radius: 9px;
+
+}
+
+
+#aside h2 {
+
+    color: aliceblue;
+
+    text-align: center;
+
+    margin-top: 5px;
+
+    margin-bottom: 20px;
+
+}
+
+
+#aside ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+
+#aside li {
+
+    margin-bottom: 8px;
+
+}
+
+
+#aside a {
+
+    display: block;
+
+    background-color: cornsilk;
+
+    color: rgb(37, 33, 94);
+
+    text-decoration: none;
+
+    text-align: center;
+
+    padding: 11px 5px;
+
+    border-radius: 5px;
+
+}
+
+
+#aside a:hover {
+
+    background-color: rgb(230, 220, 190);
+
+}
+
+
+
+/* CONTEÚDO PRINCIPAL */
+
+#main {
+
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 25px;
+
+    text-align: left;
+
+}
+
+
+
+/* FORMULÁRIO */
 
 .container {
+
     background-color: rgb(216, 243, 250);
+
     width: 400px;
-    margin: 50px auto;
+
+    max-width: 100%;
+
+    margin: 20px auto;
+
     padding: 30px;
+
     border-radius: 10px;
+
     box-shadow: 0 0 10px rgb(235, 219, 154);
+
 }
 
 
-p {
+.container h1 {
+
+    color: rgb(37, 33, 94);
+
     text-align: center;
-    color: #666;
+
+    font-size: 26px;
+
+    margin-bottom: 15px;
+
 }
 
+
+.container p {
+
+    text-align: center;
+
+    color: #666;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+/* IDENTIFICAÇÃO DOS CAMPOS */
 
 label {
+
     display: block;
+
     margin-top: 15px;
+
     margin-bottom: 5px;
+
     font-weight: bold;
+
     color: rgb(107, 112, 179);
+
 }
 
-/* Campos de preenchimento */
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 14px;
-}
 
-/* Personalização do campo de texto */
+
+/* CAMPOS DE PREENCHIMENTO */
+
+input,
+
 textarea {
-    resize: vertical;
-}
 
-/* Botão */
-button {
     width: 100%;
-    padding: 12px;
-    margin-top: 20px;
-    background-color: rgb(37, 33, 94);
-    color: white;
-    border: none;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
     border-radius: 5px;
+
+    font-size: 14px;
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+textarea {
+
+    resize: vertical;
+
+}
+
+
+
+/* BOTÃO DE ENVIO */
+
+button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 20px;
+
+    background-color: rgb(37, 33, 94);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
     font-size: 16px;
+
     cursor: pointer;
+
 }
 
 
-#aside{
-            float: left;
-            width: 24%;
-            height: 540px;
-            background-color: rgb(107, 112, 179);
+button:hover {
 
-        }
+    background-color: rgb(107, 112, 179);
 
- #header {
-        width: 100%;
-        height: 120px;
-        margin: 0 auto;
-        background-color: rgb(37, 33, 94);
-        text-align: center;
 }
+
+
+
+/* RODAPÉ */
 
 #footer {
-            float: inline-end;
-            margin-left: 20%;
-            background-color: rgb(37, 33, 94);
-            padding: 1px;
-            text-align: center;
-        }
+
+    width: 100%;
+
+    margin-top: 12px;
+
+    background-color: rgb(37, 33, 94);
+
+    padding: 5px;
+
+    text-align: center;
+
+    border-radius: 9px;
+
+}
+
+
+#footer p {
+
+    color: aliceblue;
+
+    line-height: 1.5;
+
+}
+
+
+
+/* AJUSTE PARA TELAS MENORES */
+
+@media (max-width: 768px) {
+
+    #layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    #aside {
+
+        width: 100%;
+
+    }
+
+
+    #main {
+
+        width: 100%;
+
+        padding: 15px;
+
+    }
+
+
+    .container {
+
+        margin: 10px auto;
+
+    }
+
+}
