@@ -1,45 +1,282 @@
- body{
-            background-color: rgb(98, 130, 190);
-            color: rgb(8, 1, 39);
-            padding: 9px;
-            text-align: center;
-        }
 
-        #menu{
-            float: unset;
-            width: 70%;
-            height: 120px;
-            background-color: rgb(235, 219, 154);
-        }
-        
+/* CONFIGURAÇÕES GERAIS */
 
-         #aside{
-            float: left;
-            width: 24%;
-            height: 540px;
-            background-color: rgb(107, 112, 179);
+* {
+    box-sizing: border-box;
+}
 
-        }
 
-        #main{
-            height: 1200px;
-            background-color:cornsilk;
-            left: 20%;
-            font-style: normal;
-            
-        }
-        #footer {
-            float: inline-end;
-            margin-left: 20%;
-            background-color: rgb(37, 33, 94);
-            padding: 1px;
-            text-align: center;
-        }
+body {
+    background-color: rgb(98, 130, 190);
 
-        #header {
+    color: rgb(8, 1, 39);
+
+    padding: 9px;
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* CABEÇALHO */
+
+#header {
+    width: 100%;
+
+    min-height: 120px;
+
+    margin: 0 auto 12px;
+
+    padding: 15px;
+
+    background-color: rgb(37, 33, 94);
+
+    color: aliceblue;
+
+    text-align: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+}
+
+
+#header h1 {
+    margin-bottom: 8px;
+}
+
+
+/* ORGANIZAÇÃO DO MENU E CONTEÚDO */
+
+#layout {
+    display: grid;
+
+    grid-template-columns: 24% 1fr;
+
+    align-items: start;
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+
+/* MENU LATERAL */
+
+#aside {
+    width: 100%;
+
+    background-color: rgb(107, 112, 179);
+
+    padding: 15px;
+
+    border-radius: 9px;
+}
+
+
+#aside h2 {
+    color: aliceblue;
+
+    text-align: center;
+
+    margin-top: 5px;
+
+    margin-bottom: 20px;
+}
+
+
+#aside ul {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+
+#aside li {
+    margin-bottom: 8px;
+}
+
+
+#aside a {
+    display: block;
+
+    background-color: rgb(235, 219, 154);
+
+    color: rgb(37, 33, 94);
+
+    text-decoration: none;
+
+    text-align: center;
+
+    padding: 11px 5px;
+
+    border-radius: 5px;
+}
+
+
+#aside a:hover {
+    background-color: cornsilk;
+
+    color: rgb(107, 112, 179);
+}
+
+
+/* CONTEÚDO PRINCIPAL */
+
+#main {
+    width: 100%;
+
+    min-width: 0;
+
+    background-color: cornsilk;
+
+    padding: 25px;
+
+    border-radius: 9px;
+
+    font-style: normal;
+
+    text-align: left;
+}
+
+
+#main h2 {
+    color: rgb(37, 33, 94);
+
+    text-align: center;
+
+    margin-top: 10px;
+
+    margin-bottom: 25px;
+}
+
+
+#main h3 {
+    color: rgb(107, 112, 179);
+
+    margin-top: 25px;
+
+    margin-bottom: 15px;
+}
+
+
+#main p {
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+}
+
+
+#main article {
+    margin-bottom: 25px;
+}
+
+
+#main ul {
+    padding-left: 30px;
+}
+
+
+#main li {
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+
+/* FONTES E REFERÊNCIAS */
+
+.caption {
+    font-size: 13px;
+
+    font-style: italic;
+
+    color: rgb(90, 90, 90);
+
+    text-align: right;
+}
+
+
+/* IMAGENS */
+
+#main figure {
+    text-align: center;
+
+    margin: 30px auto;
+}
+
+
+#main img {
+    display: block;
+
+    max-width: 100%;
+
+    width: 400px;
+
+    height: auto;
+
+    margin: 0 auto;
+
+    border-radius: 5px;
+}
+
+
+#main figcaption {
+    text-align: center;
+
+    margin-top: 10px;
+
+    font-style: italic;
+}
+
+
+/* RODAPÉ */
+
+#footer {
+    width: 100%;
+
+    margin-top: 12px;
+
+    background-color: rgb(37, 33, 94);
+
+    padding: 5px;
+
+    text-align: center;
+
+    border-radius: 9px;
+}
+
+
+#footer p {
+    color: aliceblue;
+
+    line-height: 1.5;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    #layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    #aside {
         width: 100%;
-        height: 120px;
-        margin: 0 auto;
-        background-color: rgb(37, 33, 94);
-        text-align: center;
+    }
+
+
+    #main {
+        width: 100%;
+    }
+
 }

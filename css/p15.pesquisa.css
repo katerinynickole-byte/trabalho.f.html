@@ -1,41 +1,248 @@
- body{
-            background-color: rgb(141, 153, 174);
-            color: rgb(37, 36, 39);
-            padding: 9px;
-            text-align: center;
-        }
 
-        #aside{
-            float: left;
-            width: 24%;
-            height: 540px;
-            background-color: rgb(217, 4, 41);
-             
+* {
+    box-sizing: border-box;
+}
 
+body {
 
-        }
-        
+    background-color: rgb(141, 153, 174);
 
+    color: rgb(37, 36, 39);
 
-        #main{
-            height: 1000px;
-            background-color: rgb(237, 242, 244);
-            left: 20%;
-            font-style: normal;
-            
-        }
-        #footer {
-            float: inline-end;
-            margin-left: 20%;
-            background-color:  rgb(43, 45, 66);
-            padding: 1px;
-            text-align: center;
-        }
+    padding: 9px;
 
-        #header {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+}
+
+/* CABEÇALHO */
+
+#header {
+
+    width: 100%;
+
+    min-height: 120px;
+
+    margin: 0 auto 12px;
+
+    padding: 15px;
+
+    background-color: rgb(43, 45, 66);
+
+    color: aliceblue;
+
+    text-align: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+}
+
+/* ORGANIZAÇÃO DO MENU E CONTEÚDO */
+
+#layout {
+
+    display: grid;
+
+    grid-template-columns: 24% 1fr;
+
+    align-items: start;
+
+    gap: 12px;
+
+    width: 100%;
+
+}
+
+/* MENU LATERAL */
+
+#aside {
+
+    width: 100%;
+
+    background-color: rgb(217, 4, 41);
+
+    padding: 15px;
+
+    border-radius: 9px;
+
+}
+
+#aside h2 {
+
+    color: aliceblue;
+
+    text-align: center;
+
+    margin-top: 5px;
+
+    margin-bottom: 20px;
+
+}
+
+#aside ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+#aside li {
+
+    margin-bottom: 8px;
+
+}
+
+#aside a {
+
+    display: block;
+
+    background-color: rgb(237, 242, 244);
+
+    color: rgb(37, 36, 39);
+
+    text-decoration: none;
+
+    text-align: center;
+
+    padding: 11px 5px;
+
+    border-radius: 5px;
+
+}
+
+#aside a:hover {
+
+    background-color: rgb(200, 205, 210);
+
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+#main {
+
+    width: 100%;
+
+    min-width: 0;
+
+    background-color: rgb(237, 242, 244);
+
+    padding: 25px;
+
+    border-radius: 9px;
+
+    text-align: left;
+
+}
+
+#main h3 {
+
+    color: rgb(43, 45, 66);
+
+    margin-top: 15px;
+
+    margin-bottom: 12px;
+
+    font-size: 20px;
+
+}
+
+#main article {
+
+    margin-bottom: 30px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid rgb(190, 195, 200);
+
+}
+
+#main ul {
+
+    padding-left: 30px;
+
+}
+
+#main li {
+
+    line-height: 1.7;
+
+    margin-bottom: 12px;
+
+    overflow-wrap: anywhere;
+
+}
+
+#main a {
+
+    color: rgb(37, 70, 120);
+
+    text-decoration: underline;
+
+}
+
+#main a:hover {
+
+    color: rgb(217, 4, 41);
+
+}
+
+/* RODAPÉ */
+
+#footer {
+
+    width: 100%;
+
+    margin-top: 12px;
+
+    background-color: rgb(43, 45, 66);
+
+    padding: 5px;
+
+    text-align: center;
+
+    border-radius: 9px;
+
+}
+
+#footer p {
+
+    color: aliceblue;
+
+    line-height: 1.5;
+
+}
+
+/* AJUSTE PARA TELAS MENORES */
+
+@media (max-width: 768px) {
+
+    #layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    #aside {
+
         width: 100%;
-        height: 120px;
-        margin: 0 auto;
-        background-color: rgb(43, 45, 66);
-        text-align: center;
+
+    }
+
+    #main {
+
+        width: 100%;
+
+    }
+
 }
